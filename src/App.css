@@ -1,38 +1,104 @@
 .App {
-  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content :center;
+  align-items:center;
+  flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Menu{
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: lightseagreen;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.Menu button,
+.Quiz button
+{
+  width: 300px;
+  height: 50px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  
+
+}
+.endscreen button{
+  width: 300px;
+  height: 50px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  
+}
+.Menu button:hover{
+  background-color: lightgray;
+  
+
+}
+body{
+  background-color: lightgrey;
+}
+.Quiz{
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  /* background-color: lightseagreen; */
+  background-color:rgb(32, 52, 117);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.endscreen{
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  /* background-color: lightseagreen; */
+  background-color:rgb(32, 52, 117);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.Menu,
+.Quiz{
+  color:white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.endbut{
+    background-color: lightseagreen;
+}
+
+.Heading{
+  width: 500px;
+  height: 100px;
+  border-radius: 10px;
+  background-color:rgb(32, 52, 117);
+  display: flex;
+  color: aliceblue;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.options{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
 }
