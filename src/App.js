@@ -1,10 +1,9 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import './App.css';
 import MainMenu from './Components/MainMenu';
 import EndScreen from './Components/EndScreen';
 import Quiz from './Components/Quiz';
 import {QuizContext} from './Helpers/Context';
-import { Questions } from "./Helpers/QuestionBank";
 
 
 function App() {
@@ -18,9 +17,9 @@ function App() {
 
 
 
-      {gameState=="quiz"?(
+      {gameState==="quiz"?(
             <h1>Question {ques}</h1>):(
-              gameState=="endscreen"?(<h1>Thank You!</h1>):(<h1>Get Ready!!!</h1>))
+              gameState==="endscreen"?(<h1>Thank You!</h1>):(<h1>Get Ready!!!</h1>))
               
         }
       
