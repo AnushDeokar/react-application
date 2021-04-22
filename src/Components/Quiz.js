@@ -7,17 +7,17 @@ import {QuizContext} from "../Helpers/Context";
 function Quiz(){
     const [currQues, setCurrQues] = useState(0);
     const [optionChosen, setOptionChosen] = useState("");
-    const {score, setScore, gameState, setGameState, ques, setQues} = useContext(QuizContext);
+    const {score, setScore, setGameState, ques, setQues} = useContext(QuizContext);
     
     const nextQuestion = ()=>{
-        if (Questions[currQues].answer == optionChosen){
+        if (Questions[currQues].answer === optionChosen){
             setScore(score+1);
         }
         setQues(ques+1);
         setCurrQues(currQues+1);
     };
     const finishQuiz = ()=>{
-        if (Questions[currQues].answer == optionChosen){
+        if (Questions[currQues].answer === optionChosen){
             setScore(score+1);
         }
         setQues(1);
@@ -32,7 +32,7 @@ function Quiz(){
             <button onClick={()=>setOptionChosen("C")}>{Questions[currQues].optionC}</button>
             <button onClick={()=>setOptionChosen("D")}>{Questions[currQues].optionD}</button>
         </div>
-        {currQues == Questions.length -1?(
+        {currQues === Questions.length -1?(
             <button className="endbut" onClick={finishQuiz}>Finish Quiz</button>):(
         <button className="endbut" onClick={nextQuestion}>Next</button>
         )}
